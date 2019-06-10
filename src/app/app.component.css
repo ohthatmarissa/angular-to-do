@@ -1,0 +1,31 @@
+body {
+    background-color: pink;
+    height: 100%;
+}
+
+.title {
+    background-color: rgb(142, 202, 140);
+    text-align: center;
+    list-style-position: inside;
+}
+
+H1 {
+    color: green;
+}
+
+/* #list {
+    margin-bottom: 10px;
+} */
+
+.links {
+    background-color: rgb(153, 109, 194);
+    text-align: center;
+}
+
+a {
+    color: hotpink;
+}
+
+#link {
+    list-style-type: none;
+}
