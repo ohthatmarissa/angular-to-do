@@ -13,7 +13,14 @@ export class TaskListComponent {
   editButtonClicked(taskToEdit: Task) {
     this.clickSender.emit(taskToEdit);
   }
+  // filterByCompleteness: string = 'incompleteTasks';
+  onChange(optionFromMenu) {
+    this.filterByCompleteness = optionFromMenu;
+  }
 
+  toggleDone(clickedTask: Task, setCompleteness: boolean) {
+    clickedTask.done = setCompleteness;
+  }
   
   priorityColor(currentTask) {
     if (currentTask.priority == 3) {
