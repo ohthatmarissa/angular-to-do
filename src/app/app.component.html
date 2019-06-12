@@ -16,7 +16,8 @@
     <h1 style="font-size: 50px;">To Do List for {{month}}/{{day}}/{{year}}</h1>
     <h3>{{currentFocus}}</h3>
     <app-task-list [childTaskList]="masterTaskList" (clickSender)="editButtonClicked($event)"></app-task-list>
-    <app-edit-task [childSelectedTask]="selectedTask"></app-edit-task>
+    <app-edit-task [childSelectedTask]="selectedTask" (doneButtonClickedSender)="finishedEditing()"></app-edit-task>
+    <app-new-task (sendTask)="addTask($event)"></app-new-task>
     <br>
     <br>
     
