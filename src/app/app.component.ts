@@ -20,7 +20,7 @@ export class AppComponent {
   ];
   
 
-  editTask(clickedTask) {
+  editButtonClicked(clickedTask) {
     this.selectedTask = clickedTask;
   }
   finishedEditing() {
