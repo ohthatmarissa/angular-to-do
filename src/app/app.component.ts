@@ -17,13 +17,19 @@ export class AppComponent {
     new Task('Begin brainstorming possible JavaScript group projects', 2),
     new Task('Add README file to last few Angular repos on GitHub', 2)
   ];
-  editTask() {
-    alert('Time to edit a task');
+  selectedTask: null;
+
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
+  finishedEditing() {
+    this.selectedTask = null;
+  }
+  
   priorityColor(currentTask) {
-    if (currentTask.priority === 3) {
+    if (currentTask.priority == 3) {
       return 'bg-danger';
-    } else if (currentTask.priority === 2) {
+    } else if (currentTask.priority == 2) {
       return 'bg-warning';
     } else {
       return 'bg-info';
